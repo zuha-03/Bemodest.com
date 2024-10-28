@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Align links horizontally */
+            margin-right: 20px; /* Space between links */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            padding: 10px 15px; /* Add padding to buttons */
+            color: white; /* Text color */
+            background-color: #07070a; /* Background color */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            background-color: #3c3b88; /* Darker background on hover */
+        }
+
+        /* Change font color of links */
+        nav ul li a {
+            color: #f9f9f6; /* Change this to your desired font color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>New Arrivals</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link to the home page -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="black outfit.jpeg" alt="Product 1">
+                <p>Black and White striped top & Black pants</p>
+                <p>Price: Aed 110</p>
+                <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="cardi.jpeg" alt="Product 2">
+                <p>Off white cardigan with black stripes</p>
+                <p>Price: Aed 99</p>
+                <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="denim.jpeg" alt="Product 3">
+                <p>Stylish denim skirt</p>
+                <p>Price: Aed 79</p>
+                <button onclick="addToCart('Product 3', 39.99)">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="download (5).jpeg" alt="Product 4">
+                <p>Long/navy blue winter coat</p>
+                <p>Price: Aed 129</p>
+                <button onclick="addToCart('Product 4', 49.99)">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="beige cardi.jpeg" alt="Product 5">
+                <p>Stylish beige and white winter set(3 Piece)</p>
+                <p>Price: Aed 149</p>
+                <button onclick="addToCart('Product 5', 59.99)">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product">
+                <img src="striped top.jpeg" alt="Product 6">
+                <p>Trendy top and pant(2 Piece)</p>
+                <p>Price: Aed 139</p>
+                <button onclick="addToCart('Product 6', 69.99)">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="product">
+                <img src="keffiyeh.jpeg" alt="Product 7">
+                <p>High quality Keffiyeh</p>
+                <p>Price: Aed 35</p>
+                <button onclick="addToCart('Product 7', 79.99)">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="product">
+                <img src="blank jumper.jpeg" alt="Product 8">
+                <p>White cardigan with black jumper suit</p>
+                <p>Price: Aed 189</p>
+                <button onclick="addToCart('Product 8', 89.99)">Add to Cart</button>
+            </div>
+            <!-- Product 9 -->
+            <div class="product">
+                <img src="floral print.jpeg" alt="Product 9">
+                <p>Floral print skirt and cute black top</p>
+                <p>Price: Aed 89</p>
+                <button onclick="addToCart('Product 9', 99.99)">Add to Cart</button>
+            </div>
+            <!-- Product 10 -->
+            <div class="product">
+                <img src="jacket.jpeg" alt="Product 10">
+                <p>Green and white sporty jacket</p>
+                <p>Price: Aed 99</p>
+                <button onclick="addToCart('Product 10', 109.99)">Add to Cart</button>
+            </div>
+            <!-- Product 11 -->
+            <div class="product">
+                <img src="white frock.jpeg" alt="Product 11">
+                <p>White layered skirt/white body suit/brown cute top</p>
+                <p>Price: Aed 210</p>
+                <button onclick="addToCart('Product 11', 119.99)">Add to Cart</button>
+            </div>
+            <!-- Product 12 -->
+            <div class="product">
+                <img src="pleated skirt (1).jpeg" alt="Product 12">
+                <p>green pleated skirt and white shirt</p>
+                <p>Price: Aed 123</p>
+                <button onclick="addToCart('Product 12', 129.99)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shopping Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

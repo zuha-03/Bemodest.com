@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Us - My Project</title> 
+    <style> 
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; } 
+        a { text-decoration: none; color: #4e44a7; } 
+    </style> 
+</head> 
+<body> 
+    <h1>About Us</h1> 
+    <a href="index.html">Back to Home</a> 
+</body> 
+</html> 

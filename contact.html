@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us - Be MODEST</title> 
+    <style> 
+        /* Style for body and background */
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0; 
+            background-image: url(contact.jpeg); /* Replace with your image path */
+            background-size: cover; 
+            background-position: center; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Title text styling */
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Style for form container */
+        .form-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Style for form */
+        form { 
+            background-color: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            width: 300px;
+        } 
+
+        /* Input and button styles */
+        input, button { 
+            display: block; 
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+        } 
+
+        /* Style for submit button */
+        button { 
+            background-color: black; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+
+        /* Container for "Back to Home" button */
+        .back-box {
+            display: inline-block;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for "Back to Home" link */
+        a {
+            color: black;
+            text-decoration: none; 
+        }
+
+        /* Hover effect for "Back to Home" */
+        a:hover {
+            text-decoration: underline;
+        }
+    </style> 
+
+    <!-- Firebase SDK --> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script> 
+    <script> 
+        // Firebase configuration copied from Firebase Console 
+        var firebaseConfig = { 
+            apiKey: "AIzaSyC4yA-d4xvi5HLwmGVQ-x1dOiqW2WlohrI", 
+            authDomain: "bemodest-3e766.firebaseapp.com", 
+            databaseURL:"https://bemodest-3e766-default-rtdb.firebaseio.com", 
+            projectId: "bemodest-3e766", 
+            storageBucket: "bemodest-3e766.appspot.com", 
+            messagingSenderId:"524552276003", 
+            appId:"1:524552276003:web:d50120b748aaa5e9d48996"
+        }; 
+
+        // Initialize Firebase 
+        firebase.initializeApp(firebaseConfig); 
+
+        // Reference to the Realtime Database 
+        var database = firebase.database(); 
+
+        // Function to submit data to Firebase 
+        function submitContactForm(event) { 
+            event.preventDefault(); 
+            var name = document.getElementById("name").value; 
+            var email = document.getElementById("email").value; 
+
+            // Save data to Firebase 
+            database.ref('contacts').push({ 
+                name: name, 
+                email: email 
+            }).then(function() { 
+                alert("Thank you for submitting!"); 
+            }).catch(function(error) { 
+                alert("Error: " + error.message); 
+            }); 
+
+            // Clear the form fields 
+            document.getElementById("contactForm").reset(); 
+        } 
+    </script> 
+
+</head> 
+<body> 
+
+    <!-- Header with title -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <!-- Form container to center the form vertically and horizontally -->
+    <div class="form-container">
+        <form id="contactForm" onsubmit="submitContactForm(event)"> 
+            <input type="text" id="name" name="name" placeholder="Your Name" required> 
+            <input type="email" id="email" name="email" placeholder="Your Email" required> 
+            <button type="submit">Submit</button> 
+        </form> 
+    </div>
+
+    <!-- Back to Home box -->
+    <div class="back-box">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</body> 
+</html>

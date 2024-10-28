@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .cart-item { margin: 15px 0; }
+        .total { font-weight: bold; }
+        button { padding: 10px 20px; background-color: #4e44a7; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <div class="total" id="total-price">Total: $0.00</div>
+    <button onclick="window.location.href='index.html'">Continue Shopping</button>
+
+    <script>
+        // Sample cart data
+        const cart = [
+            { name: "Product 1", price: 19.99 },
+            { name: "Product 2", price: 29.99 },
+            { name: "Product 3", price: 39.99 }
+        ];
+
+        const cartItemsDiv = document.getElementById('cart-items');
+        let total = 0;
+
+        cart.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item';
+            itemDiv.innerHTML = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsDiv.appendChild(itemDiv);
+            total += item.price;
+        });
+
+        document.getElementById('total-price').innerText = `Total: $${total.toFixed(2)}`;
+    </script>
+</body>
+</html>

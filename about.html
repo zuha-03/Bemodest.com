@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Background with Textbox</title>
+    <style>
+        /* Set body properties */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(gg.jpg); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Overlay with transparency */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.1); /* 60% transparent black overlay */
+        }
+
+        /* Centered box */
+        .textbox {
+            position: relative;
+            background-color: white;
+            padding: 40px;
+            width: 600px; /* Adjust as needed */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+            z-index: 1;
+        }
+
+        /* Bold title */
+        .title {
+            font-size: 36px; /* Large text size */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Description text */
+        .description {
+            font-size: 18px; /* Medium text size */
+            font-weight: normal;
+            margin-bottom: 40px; /* Add space for the buttons */
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Style for buttons */
+        .button {
+            padding: 10px 20px;
+            background-color: white; /* White background */
+            border: 2px solid black; /* Black border */
+            color: black; /* Black text */
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        .button:hover {
+            background-color: black; /* Change to black on hover */
+            color: white; /* Change text color to white on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Transparent overlay -->
+    <div class="overlay"></div>
+
+    <!-- Text box in the center -->
+    <div class="textbox">
+        <!-- Bold title -->
+        <div class="title">Gracefully Covered</div>
+        <!-- Non-bold description -->
+        <div class="description">
+            Be Modest represents our commitment to offering the best in modest fashion without compromising on style. At Be Modest, we believe that true beauty is found in refined elegance and thoughtful design. Each piece is carefully crafted to reflect timeless trends that not only cover but also celebrate modesty. Our collection merges sophistication with comfort, ensuring that you always look chic while staying true to your values. Be Modest brings you the best in fashion that is stylish, modern, and gracefully modest—because we believe you don’t have to compromise on style to stay covered.
+        </div>
+
+        <!-- Button container with three buttons -->
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="contact.html" class="button">Contact Us</a>
+            <a href="shop.html" class="button">Shop</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us - My Project</title> 
+    <style> 
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; } 
+        form { display: inline-block; text-align: left; } 
+        input { display: block; margin: 10px 0; padding: 10px; width: 300px; } 
+        button { padding: 10px 20px; background-color: #4e44a7; color: white; border: none; border-radius: 5px; } 
+    </style> 
+</head> 
+<body> 
+    <h1>Contact Us</h1> 
+    <form action="submit.php" method="POST"> 
+        <input type="text" name="name" placeholder="Your Name" required> 
+        <input type="email" name="email" placeholder="Your Email" required> 
+        <button type="submit">Submit</button> 
+    </form> 
+    <a href="index.html">Back to Home</a> 
+</body> 
+</html> 
